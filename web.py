@@ -16,8 +16,6 @@ st.subheader("This is my todo app")
 
 st.write("This is to improve activity")
 
-st.checkbox("Buy grocery")
-
 
 for index, todo in enumerate(todos):
     checkbox = st.checkbox(todo, key=todo)
