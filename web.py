@@ -3,6 +3,10 @@ import function
 
 todos = function.get_todos()
 
+st.set_page_config(layout="wide")
+
+
+
 def add_todo():
     todo = st.session_state["new_todo"] + '\n'
     todos.append(todo)
@@ -14,7 +18,10 @@ def add_todo():
 st.title("My todo App")
 st.subheader("This is my todo app")
 
-st.write("This is to improve activity")
+st.write("This is to improve <b>activity</b>",
+         unsafe_allow_html=True)
+st.write("<h1>This is another experiment</h1>",
+         unsafe_allow_html=True)
 
 
 for index, todo in enumerate(todos):
